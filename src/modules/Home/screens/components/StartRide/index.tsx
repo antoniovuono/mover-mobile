@@ -1,14 +1,27 @@
 import { Entypo } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { TouchableOpacity } from "react-native";
+import {
+    TouchableOpacity,
+    LayoutAnimation,
+    Platform,
+    UIManager,
+} from "react-native";
 
 import { Container, ExpandContent } from "./styles";
+
+if (
+    Platform.OS === "android" &&
+    UIManager.setLayoutAnimationEnabledExperimental
+) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 const StartRide: React.FC = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleExpandContent = () => {
         setIsExpanded((prevState) => !prevState);
+        LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     };
 
     return (
