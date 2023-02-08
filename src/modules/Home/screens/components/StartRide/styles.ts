@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View<{ expand: boolean }>`
     width: 85%;
-    height: ${({ expand }) => (expand ? 80 : 20)}%;
+    height: ${({ expand }) => (expand ? 65 : 20)}%;
     background-color: white;
     position: absolute;
     bottom: 30px;
