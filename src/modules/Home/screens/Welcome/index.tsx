@@ -2,6 +2,7 @@ import React from "react";
 import MapView from "react-native-maps";
 
 import { Container } from "./styles";
+import StartRide from "../components/StartRide";
 
 const Welcome: React.FC = () => {
     return (
@@ -15,6 +16,8 @@ const Welcome: React.FC = () => {
                     longitudeDelta: 0.0421,
                 }}
             />
+
+            <StartRide />
         </Container>
     );
 };
