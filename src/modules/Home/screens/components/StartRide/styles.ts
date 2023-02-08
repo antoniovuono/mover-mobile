@@ -1,9 +1,8 @@
-import { Platform } from "react-native";
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled.View<{ expand: boolean }>`
     width: 85%;
-    height: ${Platform.OS === "ios" ? 170 : 141}px;
+    height: ${({ expand }) => (expand ? 80 : 20)}%;
     background-color: white;
     position: absolute;
     bottom: 30px;
