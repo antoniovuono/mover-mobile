@@ -1,3 +1,4 @@
+import SearchLocationInput from "@components/SearchLocationInput";
 import { Entypo } from "@expo/vector-icons";
 import React, { useState } from "react";
 import {
@@ -7,7 +8,7 @@ import {
     UIManager,
 } from "react-native";
 
-import { Container, ExpandContent } from "./styles";
+import { Container, ExpandContent, SearchLocationContent } from "./styles";
 
 if (
     Platform.OS === "android" &&
@@ -46,6 +47,11 @@ const StartRide: React.FC = () => {
                     )}
                 </TouchableOpacity>
             </ExpandContent>
+
+            <SearchLocationContent>
+                <SearchLocationInput />
+                <SearchLocationInput />
+            </SearchLocationContent>
         </Container>
     );
 };
