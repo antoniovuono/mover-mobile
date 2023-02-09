@@ -1,6 +1,6 @@
 import SearchLocationInput from "@components/SearchLocationInput";
 import { Entypo } from "@expo/vector-icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     TouchableOpacity,
     LayoutAnimation,
@@ -27,6 +27,27 @@ const StartRide: React.FC = () => {
         setIsExpanded((prevState) => !prevState);
         LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     };
+
+    useEffect(() => {
+        const keyBoardDisShowListener = Keyboard.addListener(
+            "keyboardDidShow",
+            () => {
+                setIsExpanded(true);
+            }
+        );
+
+        const keyBoardDisHideListener = Keyboard.addListener(
+            "keyboardDidHide",
+            () => {
+                // setIsExpanded(false);
+            }
+        );
+
+        return () => {
+            keyBoardDisShowListener.remove();
+            keyBoardDisHideListener.remove();
+        };
+    }, []);
 
     return (
         <Container expand={isExpanded}>
