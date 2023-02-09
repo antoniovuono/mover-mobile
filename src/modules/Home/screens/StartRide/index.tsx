@@ -36,16 +36,8 @@ const StartRide: React.FC = () => {
             }
         );
 
-        const keyBoardDisHideListener = Keyboard.addListener(
-            "keyboardDidHide",
-            () => {
-                // setIsExpanded(false);
-            }
-        );
-
         return () => {
             keyBoardDisShowListener.remove();
-            keyBoardDisHideListener.remove();
         };
     }, []);
 
