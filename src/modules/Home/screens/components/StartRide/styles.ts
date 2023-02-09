@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View<{ expand: boolean }>`
+    background-color: ${({ theme }) => theme.colors.background_white};
     width: 85%;
     height: ${({ expand }) => (expand ? 65 : 20)}%;
     background-color: white;
