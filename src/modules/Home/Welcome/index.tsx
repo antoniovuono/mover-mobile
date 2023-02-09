@@ -2,7 +2,7 @@ import React from "react";
 import MapView from "react-native-maps";
 
 import { Container } from "./styles";
-import StartRide from "../components/StartRide";
+import StartRide from "../screens/StartRide";
 
 const Welcome: React.FC = () => {
     return (

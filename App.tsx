@@ -5,11 +5,10 @@ import {
     Roboto_700Bold,
     useFonts,
 } from "@expo-google-fonts/roboto";
+import Welcome from "@modules/Home/Welcome";
+import theme from "@theme/theme";
 import React from "react";
 import { ThemeProvider } from "styled-components";
-
-import theme from "./src/global/styles/theme";
-import Welcome from "./src/modules/Home/screens/Welcome";
 
 const App: React.FC = () => {
     const [fontsLoaded] = useFonts({
