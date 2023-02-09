@@ -15,4 +15,6 @@ export const Input = styled.TextInput`
     padding: 0 15px;
     margin-left: 10px;
     flex: 1;
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.primary_title_dark};
 `;

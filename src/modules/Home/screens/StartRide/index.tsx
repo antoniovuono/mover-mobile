@@ -6,6 +6,9 @@ import {
     LayoutAnimation,
     Platform,
     UIManager,
+    KeyboardAvoidingView,
+    TouchableWithoutFeedback,
+    Keyboard,
 } from "react-native";
 
 import { Container, ExpandContent, SearchLocationContent } from "./styles";
@@ -48,10 +51,14 @@ const StartRide: React.FC = () => {
                 </TouchableOpacity>
             </ExpandContent>
 
-            <SearchLocationContent>
-                <SearchLocationInput />
-                <SearchLocationInput />
-            </SearchLocationContent>
+            <KeyboardAvoidingView behavior="position" enabled>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                    <SearchLocationContent>
+                        <SearchLocationInput placeholder="Local de embarque" />
+                        <SearchLocationInput placeholder="Destino" />
+                    </SearchLocationContent>
+                </TouchableWithoutFeedback>
+            </KeyboardAvoidingView>
         </Container>
     );
 };
