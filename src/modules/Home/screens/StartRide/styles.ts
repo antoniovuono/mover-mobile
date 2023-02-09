@@ -18,5 +18,5 @@ export const ExpandContent = styled.View`
 `;
 
 export const SearchLocationContent = styled.View`
-    padding: 10px 20px;
+    padding: 10px 14px;
 `;
