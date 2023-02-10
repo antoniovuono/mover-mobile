@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View<{ expand: boolean }>`
     background-color: ${({ theme }) => theme.colors.background_white};
-    width: 85%;
+    width: 90%;
     height: ${({ expand }) =>
         expand
             ? Platform.OS === "ios"
