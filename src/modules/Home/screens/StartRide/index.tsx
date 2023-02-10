@@ -74,6 +74,7 @@ const StartRide: React.FC = () => {
                             <PrimaryButton
                                 title="Solicitar motorista"
                                 onPress={() => {}}
+                                primary
                             />
                         )}
                     </SearchLocationContent>

@@ -42,4 +42,49 @@ describe("Primary Button", () => {
 
         expect(handleClick).toHaveBeenCalled();
     });
+
+    it("Should be able to render green color when primary was actived", () => {
+        const { getByTestId } = render(
+            <PrimaryButton
+                title="Solicitar um motorista"
+                onPress={() => {}}
+                primary
+            />,
+            {
+                wrapper: Provider,
+            }
+        );
+
+        const button = getByTestId(/primaryButton/);
+
+        expect(button.props.style.backgroundColor).toEqual(
+            theme.colors.primary_success_green
+        );
+    });
+
+    it("Should be able to render red color when primary was not actived", () => {
+        const { getByTestId } = render(
+            <PrimaryButton title="Solicitar um motorista" onPress={() => {}} />,
+            {
+                wrapper: Provider,
+            }
+        );
+
+        const button = getByTestId(/primaryButton/);
+
+        expect(button.props.style.backgroundColor).toEqual(
+            theme.colors.primary_warning_red
+        );
+    });
+
+    it("Should be able to render a button title", () => {
+        const { getByText } = render(
+            <PrimaryButton title="Solicitar um motorista" onPress={() => {}} />,
+            {
+                wrapper: Provider,
+            }
+        );
+
+        expect(getByText(/Solicitar um/i)).toBeTruthy();
+    });
 });
