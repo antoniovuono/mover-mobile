@@ -9,7 +9,7 @@ interface IButtonProps {
 
 const PrimaryButton: React.FC<IButtonProps> = ({ title, onPress, ...rest }) => {
     return (
-        <Button onPress={onPress} activeOpacity={0.7}>
+        <Button testID="primaryButton" onPress={onPress} activeOpacity={0.7}>
             <Title>{title}</Title>
         </Button>
     );
