@@ -1,3 +1,4 @@
+import PrimaryButton from "@components/PrimaryButton";
 import SearchLocationInput from "@components/SearchLocationInput";
 import { Entypo } from "@expo/vector-icons";
 import React, { useEffect, useState } from "react";
@@ -67,8 +68,14 @@ const StartRide: React.FC = () => {
             <KeyboardAvoidingView behavior="position" enabled>
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <SearchLocationContent>
-                        <SearchLocationInput placeholder="Local de embarque" />
+                        <SearchLocationInput placeholder="Ponto de embarque" />
                         <SearchLocationInput placeholder="Destino" />
+                        {isExpanded && (
+                            <PrimaryButton
+                                title="Solicitar motorista"
+                                onPress={() => {}}
+                            />
+                        )}
                     </SearchLocationContent>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>

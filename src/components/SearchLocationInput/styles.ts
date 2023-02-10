@@ -9,4 +9,5 @@ export const Input = styled.TextInput`
     font-size: 16px;
     color: ${({ theme }) => theme.colors.primary_title_dark};
     margin-bottom: 6px;
+    font-family: ${({ theme }) => theme.fonts.ROBOTO_REGULAR};
 `;
