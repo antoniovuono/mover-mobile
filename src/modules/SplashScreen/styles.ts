@@ -2,9 +2,17 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${({ theme }) => theme.colors.secondary_title_dark};
+    background-color: ${({ theme }) => theme.colors.black_opacity};
     justify-content: center;
     align-items: center;
+    width: 100%;
+`;
+
+export const BackGroundImage = styled.ImageBackground`
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
 `;
 
 export const Title = styled.Text`

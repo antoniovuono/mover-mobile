@@ -9,6 +9,7 @@ export default {
         primary_alert_yellow: "#FFBB0D",
         input_blue: "#EDF6FF",
         primary_gray: "#979797",
+        black_opacity: "rgba(0, 0, 0, 0.7)",
     },
     fonts: {
         ROBOTO_REGULAR: "Roboto_400Regular",
