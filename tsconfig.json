@@ -8,7 +8,8 @@
       "@assets/*": ["./src/assets/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@theme/*": ["./src/global/styles/*"],
-      "@interfaces/*": ["./src/interfaces/*"]
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@routes/*": ["./src/routes/*"]
     },
 
   },
