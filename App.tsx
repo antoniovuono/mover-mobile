@@ -6,6 +6,7 @@ import {
     useFonts,
 } from "@expo-google-fonts/roboto";
 import Welcome from "@modules/Home/Welcome";
+import SplashScreen from "@modules/SplashScreen";
 import theme from "@theme/theme";
 import React from "react";
 import { ThemeProvider } from "styled-components";
@@ -24,7 +25,7 @@ const App: React.FC = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Welcome />
+            <SplashScreen />
         </ThemeProvider>
     );
 };
