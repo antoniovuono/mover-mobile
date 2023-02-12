@@ -11,6 +11,7 @@ import {
     TouchableWithoutFeedback,
     Keyboard,
 } from "react-native";
+import { useTheme } from "styled-components";
 
 import { Container, ExpandContent, SearchLocationContent } from "./styles";
 
@@ -23,6 +24,8 @@ if (
 
 const StartRide: React.FC = () => {
     const [isExpanded, setIsExpanded] = useState(false);
+
+    const theme = useTheme();
 
     const handleExpandContent = () => {
         setIsExpanded((prevState) => !prevState);
@@ -68,8 +71,14 @@ const StartRide: React.FC = () => {
             <KeyboardAvoidingView behavior="position" enabled>
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <SearchLocationContent>
-                        <SearchLocationInput placeholder="Ponto de embarque" />
-                        <SearchLocationInput placeholder="Destino" />
+                        <SearchLocationInput
+                            placeholder="Ponto de embarque"
+                            placeholderTextColor={theme.colors.primary_gray}
+                        />
+                        <SearchLocationInput
+                            placeholder="Destino"
+                            placeholderTextColor={theme.colors.primary_gray}
+                        />
                         {isExpanded && (
                             <PrimaryButton
                                 title="Solicitar motorista"

@@ -26,6 +26,7 @@ module.exports = function (api) {
                         "@assets": ".src/assets",
                         "@hooks": "./src/hooks",
                         "@theme": "./src/global/styles",
+                        "@interfaces": "./src/interfaces",
                     },
                 },
             ],

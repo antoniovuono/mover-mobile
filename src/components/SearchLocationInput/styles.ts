@@ -1,6 +1,7 @@
+import { TextInput } from "react-native";
 import styled from "styled-components/native";
 
-export const Input = styled.TextInput`
+export const Input = styled(TextInput)`
     width: 100%;
     height: 45px;
     background-color: ${({ theme }) => theme.colors.input_blue};

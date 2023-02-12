@@ -1,3 +1,4 @@
+import { IThemeProviderProps } from "@interfaces/index";
 import { render, fireEvent } from "@testing-library/react-native";
 import theme from "@theme/theme";
 import React from "react";
@@ -5,11 +6,7 @@ import { ThemeProvider } from "styled-components/native";
 
 import PrimaryButton from "../index";
 
-interface IProviderProps {
-    children: React.ReactNode;
-}
-
-const Provider: React.FC<IProviderProps> = ({ children }) => {
+const Provider: React.FC<IThemeProviderProps> = ({ children }) => {
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
