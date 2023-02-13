@@ -9,7 +9,6 @@ import {
     Title,
     SubTitleCircle,
     BackGroundImage,
-    Loader,
 } from "./styles";
 import Img from "../../assets/images/background.jpg";
 
@@ -24,8 +23,8 @@ const SplashScreen: React.FC = () => {
 
     return (
         <BackGroundImage source={Img}>
-            <StatusBar translucent barStyle="light-content" />
             <Container>
+                <StatusBar translucent barStyle="light-content" />
                 <Title>mover</Title>
 
                 <SubTitleContent>
@@ -35,7 +34,6 @@ const SplashScreen: React.FC = () => {
                     <SubTitleCircle />
                     <SubTitle>segurança</SubTitle>
                 </SubTitleContent>
-                <Loader size="large" />
             </Container>
         </BackGroundImage>
     );

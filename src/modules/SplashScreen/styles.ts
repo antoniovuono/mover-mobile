@@ -43,7 +43,3 @@ export const SubTitleCircle = styled.View`
     border-radius: 50px;
     background-color: ${({ theme }) => theme.colors.background_white};
 `;
-
-export const Loader = styled.ActivityIndicator`
-    margin-top: 20px;
-`;
